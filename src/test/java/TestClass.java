@@ -18,7 +18,7 @@ public class TestClass{
     @SuppressWarnings("unchecked")
     @Test
     public void getTheJSON() {
-        when().get("https://api.telegram.org/bot1030325998:AAERsCxzhfoUrBmj9wYZkDsO0G_Zi7XC7Dw/getUpdates")
+        when().get("https://api.telegram.org/botSomeToken/getUpdates")
                 .then().extract().body().as(DasModell.class);
     }
 
