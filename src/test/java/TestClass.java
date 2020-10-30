@@ -10,7 +10,7 @@ public class TestClass{
         RestAssured.baseURI = "https://api.telegram.org/botSomeToken/getUpdates";
         From pojo = new From();
         RestAssured.given().when().get().as(From.class);
-        System.out.println(pojo.toString());
+        System.out.println(pojo.getFirst_name());
 
     }
 }
