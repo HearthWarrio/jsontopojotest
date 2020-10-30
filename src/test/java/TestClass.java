@@ -17,5 +17,13 @@ public class TestClass{
         RestAssured.given().when().get().as(FromPojo.class);
         System.out.println(pojo.toString());
 
+<<<<<<< HEAD
+=======
+    @SuppressWarnings("unchecked")
+    @Test
+    public void getTheJSON() {
+        when().get("https://api.telegram.org/botSomeToken/getUpdates")
+                .then().extract().body().as(DasModell.class);
+>>>>>>> df5798d7d2e2e83c4c6fba86c6dafa57e9b8e46b
     }
 }
