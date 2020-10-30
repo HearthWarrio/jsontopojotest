@@ -1,3 +1,5 @@
+import groovy.time.BaseDuration;
+import io.restassured.RestAssured;
 import org.junit.Before;
 import org.junit.Test;
 
@@ -7,19 +9,13 @@ import static io.restassured.RestAssured.when;
 
 public class TestClass{
 
-    File basedir;
-    TestClass testClass;
-
-    @Before
-    public void setUp() {
-        basedir = new File("./src/test/resources/schema");
-    }
-
-    @SuppressWarnings("unchecked")
     @Test
-    public void getTheJSON() {
-        when().get("https://api.telegram.org/bot1030325998:AAERsCxzhfoUrBmj9wYZkDsO0G_Zi7XC7Dw/getUpdates")
-                .then().extract().body().as(DasModell.class);
-    }
+    public void DoTest() {
 
+        RestAssured.baseURI = "https://api.telegram.org/bot1030325998:AAERsCxzhfoUrBmj9wYZkDsO0G_Zi7XC7Dw/getUpdates";
+        FromPojo pojo = new FromPojo();
+        RestAssured.given().when().get().as(FromPojo.class);
+        System.out.println(pojo.toString());
+
+    }
 }
