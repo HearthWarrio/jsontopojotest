@@ -1,16 +1,27 @@
 import Entity.From;
-import io.restassured.RestAssured;
+import com.google.gson.Gson;
 import org.junit.Test;
+
+import java.io.IOException;
+import java.io.InputStream;
+import java.io.InputStreamReader;
+import java.io.Reader;
+import java.net.URL;
+import java.nio.charset.StandardCharsets;
 
 public class TestClass{
 
     @Test
-    public void DoTest() {
+    public void DoTest() throws IOException {
 
-        RestAssured.baseURI = "https://api.telegram.org/botSomeToken/getUpdates";
-        From pojo = new From();
-        RestAssured.given().when().get().as(From.class);
-        System.out.println(pojo.getFirst_name());
+        String webPage = "https://api.telegram.org/bot1030325998:AAERsCxzhfoUrBmj9wYZkDsO0G_Zi7XC7Dw/getUpdates";
 
+        try (InputStream is = new URL(webPage).openStream();
+             Reader reader = new InputStreamReader(is, StandardCharsets.UTF_8)) {
+            Gson gson = new Gson();
+            From first_name = gson.fromJson(reader, From.class);
+
+            System.out.println(first_name);
+        }
     }
 }
