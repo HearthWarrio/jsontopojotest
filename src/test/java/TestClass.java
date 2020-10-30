@@ -14,7 +14,7 @@ public class TestClass{
     @Test
     public void DoTest() throws IOException {
 
-        String webPage = "https://api.telegram.org/bot1030325998:AAERsCxzhfoUrBmj9wYZkDsO0G_Zi7XC7Dw/getUpdates";
+        String webPage = "https://api.telegram.org/botSomeToken/getUpdates";
 
         try (InputStream is = new URL(webPage).openStream();
              Reader reader = new InputStreamReader(is, StandardCharsets.UTF_8)) {
