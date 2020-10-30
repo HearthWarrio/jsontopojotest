@@ -1,0 +1,157 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<testsuite tests="1" failures="0" name="TestClass" time="1.333" errors="1" skipped="0">
+  <properties>
+    <property name="java.runtime.name" value="Java(TM) SE Runtime Environment"/>
+    <property name="java.vm.version" value="13.0.2+8"/>
+    <property name="sun.boot.library.path" value="C:\Program Files\Java\jdk-13.0.2\bin"/>
+    <property name="maven.multiModuleProjectDirectory" value="E:\jsontopojotest"/>
+    <property name="java.vm.vendor" value="Oracle Corporation"/>
+    <property name="java.vendor.url" value="https://java.oracle.com/"/>
+    <property name="guice.disable.misplaced.annotation.check" value="true"/>
+    <property name="path.separator" value=";"/>
+    <property name="java.vm.name" value="Java HotSpot(TM) 64-Bit Server VM"/>
+    <property name="sun.os.patch.level" value=""/>
+    <property name="user.script" value=""/>
+    <property name="user.country" value="RU"/>
+    <property name="sun.java.launcher" value="SUN_STANDARD"/>
+    <property name="java.vm.specification.name" value="Java Virtual Machine Specification"/>
+    <property name="user.dir" value="E:\jsontopojotest"/>
+    <property name="java.vm.compressedOopsMode" value="Zero based"/>
+    <property name="java.runtime.version" value="13.0.2+8"/>
+    <property name="os.arch" value="amd64"/>
+    <property name="java.io.tmpdir" value="C:\Users\user\AppData\Local\Temp\"/>
+    <property name="line.separator" value="
+"/>
+    <property name="java.vm.specification.vendor" value="Oracle Corporation"/>
+    <property name="user.variant" value=""/>
+    <property name="os.name" value="Windows 10"/>
+    <property name="idea.version2020.1" value="true"/>
+    <property name="maven.ext.class.path" value="E:\JetBrains IntelliJ IDEA Ultimate 2020.1 x64\ideaIU-2020.1.windows\plugins\maven\lib\maven-event-listener.jar"/>
+    <property name="classworlds.conf" value="E:\JetBrains IntelliJ IDEA Ultimate 2020.1 x64\ideaIU-2020.1.windows\plugins\maven\lib\maven3\bin\m2.conf"/>
+    <property name="sun.jnu.encoding" value="Cp1251"/>
+    <property name="java.library.path" value="C:\Program Files\Java\jdk-13.0.2\bin;C:\Windows\Sun\Java\bin;C:\Windows\system32;C:\Windows;C:\app\user\product\18.0.0\dbhomeXE\bin;C:\Windows\system32;C:\Windows;C:\Windows\System32\Wbem;C:\Windows\System32\WindowsPowerShell\v1.0\;C:\Windows\System32\OpenSSH\;C:\Program Files (x86)\NVIDIA Corporation\PhysX\Common;C:\Program Files\Git\cmd;C:\Program Files\MySQL\MySQL Shell 8.0\bin\;C:\Program Files\Java\jdk-13.0.2\bin;C:\Users\user\AppData\Local\GitHubDesktop\bin;C:\Program Files\maven\bin;;."/>
+    <property name="maven.conf" value="E:\JetBrains IntelliJ IDEA Ultimate 2020.1 x64\ideaIU-2020.1.windows\plugins\maven\lib\maven3/conf"/>
+    <property name="jdk.debug" value="release"/>
+    <property name="java.class.version" value="57.0"/>
+    <property name="java.specification.name" value="Java Platform API Specification"/>
+    <property name="sun.management.compiler" value="HotSpot 64-Bit Tiered Compilers"/>
+    <property name="os.version" value="10.0"/>
+    <property name="user.home" value="C:\Users\user"/>
+    <property name="user.timezone" value="Europe/Moscow"/>
+    <property name="file.encoding" value="UTF-8"/>
+    <property name="java.specification.version" value="13"/>
+    <property name="user.name" value="user"/>
+    <property name="java.class.path" value="E:\JetBrains IntelliJ IDEA Ultimate 2020.1 x64\ideaIU-2020.1.windows\plugins\maven\lib\maven3\boot\plexus-classworlds-2.6.0.jar"/>
+    <property name="java.vm.specification.version" value="13"/>
+    <property name="sun.arch.data.model" value="64"/>
+    <property name="sun.java.command" value="org.codehaus.classworlds.Launcher -Didea.version2020.1 clean install"/>
+    <property name="java.home" value="C:\Program Files\Java\jdk-13.0.2"/>
+    <property name="user.language" value="ru"/>
+    <property name="java.specification.vendor" value="Oracle Corporation"/>
+    <property name="java.vm.info" value="mixed mode, sharing"/>
+    <property name="java.version" value="13.0.2"/>
+    <property name="java.vendor" value="Oracle Corporation"/>
+    <property name="maven.home" value="E:\JetBrains IntelliJ IDEA Ultimate 2020.1 x64\ideaIU-2020.1.windows\plugins\maven\lib\maven3"/>
+    <property name="file.separator" value="\"/>
+    <property name="java.version.date" value="2020-01-14"/>
+    <property name="java.vendor.url.bug" value="https://bugreport.java.com/bugreport/"/>
+    <property name="sun.io.unicode.encoding" value="UnicodeLittle"/>
+    <property name="sun.cpu.endian" value="little"/>
+    <property name="sun.cpu.isalist" value="amd64"/>
+  </properties>
+  <testcase classname="TestClass" name="DoTest" time="1.333">
+    <error message="Unrecognized field &quot;ok&quot; (class Entity.From), not marked as ignorable (6 known properties: &quot;is_bot&quot;, &quot;language_code&quot;, &quot;username&quot;, &quot;first_name&quot;, &quot;id&quot;, &quot;last_name&quot;])
+ at [Source: {&quot;ok&quot;:true,&quot;result&quot;:[{&quot;update_id&quot;:606267422,
+&quot;message&quot;:{&quot;message_id&quot;:170,&quot;from&quot;:{&quot;id&quot;:181695409,&quot;is_bot&quot;:false,&quot;first_name&quot;:&quot;HearthWarrio&quot;,&quot;username&quot;:&quot;HearthWarrio&quot;,&quot;language_code&quot;:&quot;ru&quot;},&quot;chat&quot;:{&quot;id&quot;:181695409,&quot;first_name&quot;:&quot;HearthWarrio&quot;,&quot;username&quot;:&quot;HearthWarrio&quot;,&quot;type&quot;:&quot;private&quot;},&quot;date&quot;:1603977550,&quot;text&quot;:&quot;/help&quot;,&quot;entities&quot;:[{&quot;offset&quot;:0,&quot;length&quot;:5,&quot;type&quot;:&quot;bot_command&quot;}]}},{&quot;update_id&quot;:606267423,
+&quot;message&quot;:{&quot;message_id&quot;:171,&quot;from&quot;:{&quot;id&quot;:583999720,&quot;is_bot&quot;:false,&quot;first_name&quot;:&quot;\u041d\u0438\u043a\u0438\u0442\u0430&quot;,&quot;last_name&quot;:&quot;\u0420\u0430\u0437\u0443\u0432\u0430\u0435\u0432&quot;,&quot;username&quot;:&quot;neksword&quot;,&quot;language_code&quot;:&quot;en&quot;},&quot;chat&quot;:{&quot;id&quot;:583999720,&quot;first_name&quot;:&quot;\u041d\u0438\u043a\u0438\u0442\u0430&quot;,&quot;last_name&quot;:&quot;\u0420\u0430\u0437\u0443\u0432\u0430\u0435\u0432&quot;,&quot;username&quot;:&quot;neksword&quot;,&quot;type&quot;:&quot;private&quot;},&quot;date&quot;:1603977582,&quot;text&quot;:&quot;\u044b\u0446\u043f\u044b\u0446\u043f&quot;}},{&quot;update_id&quot;:606267424,
+&quot;message&quot;:{&quot;message_id&quot;:172,&quot;from&quot;:{&quot;id&quot;:583999720,&quot;is_bot&quot;:false,&quot;first_name&quot;:&quot;\u041d\u0438\u043a\u0438\u0442\u0430&quot;,&quot;last_name&quot;:&quot;\u0420\u0430\u0437\u0443\u0432\u0430\u0435\u0432&quot;,&quot;username&quot;:&quot;neksword&quot;,&quot;language_code&quot;:&quot;en&quot;},&quot;chat&quot;:{&quot;id&quot;:583999720,&quot;first_name&quot;:&quot;\u041d\u0438\u043a\u0438\u0442\u0430&quot;,&quot;last_name&quot;:&quot;\u0420\u0430\u0437\u0443\u0432\u0430\u0435\u0432&quot;,&quot;username&quot;:&quot;neksword&quot;,&quot;type&quot;:&quot;private&quot;},&quot;date&quot;:1603977582,&quot;text&quot;:&quot;\u043f&quot;}},{&quot;update_id&quot;:606267425,
+&quot;message&quot;:{&quot;message_id&quot;:173,&quot;from&quot;:{&quot;id&quot;:583999720,&quot;is_bot&quot;:false,&quot;first_name&quot;:&quot;\u041d\u0438\u043a\u0438\u0442\u0430&quot;,&quot;last_name&quot;:&quot;\u0420\u0430\u0437\u0443\u0432\u0430\u0435\u0432&quot;,&quot;username&quot;:&quot;neksword&quot;,&quot;language_code&quot;:&quot;en&quot;},&quot;chat&quot;:{&quot;id&quot;:583999720,&quot;first_name&quot;:&quot;\u041d\u0438\u043a\u0438\u0442\u0430&quot;,&quot;last_name&quot;:&quot;\u0420\u0430\u0437\u0443\u0432\u0430\u0435\u0432&quot;,&quot;username&quot;:&quot;neksword&quot;,&quot;type&quot;:&quot;private&quot;},&quot;date&quot;:1603977582,&quot;text&quot;:&quot;\u0443\u043a\u043f\u0443&quot;}},{&quot;update_id&quot;:606267426,
+&quot;message&quot;:{&quot;message_id&quot;:174,&quot;from&quot;:{&quot;id&quot;:583999720,&quot;is_bot&quot;:false,&quot;first_name&quot;:&quot;\u041d\u0438\u043a\u0438\u0442\u0430&quot;,&quot;last_name&quot;:&quot;\u0420\u0430\u0437\u0443\u0432\u0430\u0435\u0432&quot;,&quot;username&quot;:&quot;neksword&quot;,&quot;language_code&quot;:&quot;en&quot;},&quot;chat&quot;:{&quot;id&quot;:583999720,&quot;first_name&quot;:&quot;\u041d\u0438\u043a\u0438\u0442\u0430&quot;,&quot;last_name&quot;:&quot;\u0420\u0430\u0437\u0443\u0432\u0430\u0435\u0432&quot;,&quot;username&quot;:&quot;neksword&quot;,&quot;type&quot;:&quot;private&quot;},&quot;date&quot;:1603977583,&quot;text&quot;:&quot;\u043f&quot;}},{&quot;update_id&quot;:606267427,
+&quot;message&quot;:{&quot;message_id&quot;:175,&quot;from&quot;:{&quot;id&quot;:583999720,&quot;is_bot&quot;:false,&quot;first_name&quot;:&quot;\u041d\u0438\u043a\u0438\u0442\u0430&quot;,&quot;last_name&quot;:&quot;\u0420\u0430\u0437\u0443\u0432\u0430\u0435\u0432&quot;,&quot;username&quot;:&quot;neksword&quot;,&quot;language_code&quot;:&quot;en&quot;},&quot;chat&quot;:{&quot;id&quot;:583999720,&quot;first_name&quot;:&quot;\u041d\u0438\u043a\u0438\u0442\u0430&quot;,&quot;last_name&quot;:&quot;\u0420\u0430\u0437\u0443\u0432\u0430\u0435\u0432&quot;,&quot;username&quot;:&quot;neksword&quot;,&quot;type&quot;:&quot;private&quot;},&quot;date&quot;:1603977583,&quot;text&quot;:&quot;\u0443\u043f&quot;}},{&quot;update_id&quot;:606267428,
+&quot;message&quot;:{&quot;message_id&quot;:176,&quot;from&quot;:{&quot;id&quot;:583999720,&quot;is_bot&quot;:false,&quot;first_name&quot;:&quot;\u041d\u0438\u043a\u0438\u0442\u0430&quot;,&quot;last_name&quot;:&quot;\u0420\u0430\u0437\u0443\u0432\u0430\u0435\u0432&quot;,&quot;username&quot;:&quot;neksword&quot;,&quot;language_code&quot;:&quot;en&quot;},&quot;chat&quot;:{&quot;id&quot;:583999720,&quot;first_name&quot;:&quot;\u041d\u0438\u043a\u0438\u0442\u0430&quot;,&quot;last_name&quot;:&quot;\u0420\u0430\u0437\u0443\u0432\u0430\u0435\u0432&quot;,&quot;username&quot;:&quot;neksword&quot;,&quot;type&quot;:&quot;private&quot;},&quot;date&quot;:1603977583,&quot;text&quot;:&quot;\u0443&quot;}},{&quot;update_id&quot;:606267429,
+&quot;message&quot;:{&quot;message_id&quot;:177,&quot;from&quot;:{&quot;id&quot;:583999720,&quot;is_bot&quot;:false,&quot;first_name&quot;:&quot;\u041d\u0438\u043a\u0438\u0442\u0430&quot;,&quot;last_name&quot;:&quot;\u0420\u0430\u0437\u0443\u0432\u0430\u0435\u0432&quot;,&quot;username&quot;:&quot;neksword&quot;,&quot;language_code&quot;:&quot;en&quot;},&quot;chat&quot;:{&quot;id&quot;:583999720,&quot;first_name&quot;:&quot;\u041d\u0438\u043a\u0438\u0442\u0430&quot;,&quot;last_name&quot;:&quot;\u0420\u0430\u0437\u0443\u0432\u0430\u0435\u0432&quot;,&quot;username&quot;:&quot;neksword&quot;,&quot;type&quot;:&quot;private&quot;},&quot;date&quot;:1603977583,&quot;text&quot;:&quot;\u043f\u0443&quot;}},{&quot;update_id&quot;:606267430,
+&quot;message&quot;:{&quot;message_id&quot;:178,&quot;from&quot;:{&quot;id&quot;:583999720,&quot;is_bot&quot;:false,&quot;first_name&quot;:&quot;\u041d\u0438\u043a\u0438\u0442\u0430&quot;,&quot;last_name&quot;:&quot;\u0420\u0430\u0437\u0443\u0432\u0430\u0435\u0432&quot;,&quot;username&quot;:&quot;neksword&quot;,&quot;language_code&quot;:&quot;en&quot;},&quot;chat&quot;:{&quot;id&quot;:583999720,&quot;first_name&quot;:&quot;\u041d\u0438\u043a\u0438\u0442\u0430&quot;,&quot;last_name&quot;:&quot;\u0420\u0430\u0437\u0443\u0432\u0430\u0435\u0432&quot;,&quot;username&quot;:&quot;neksword&quot;,&quot;type&quot;:&quot;private&quot;},&quot;date&quot;:1603977583,&quot;text&quot;:&quot;\u043f&quot;}},{&quot;update_id&quot;:606267431,
+&quot;message&quot;:{&quot;message_id&quot;:179,&quot;from&quot;:{&quot;id&quot;:583999720,&quot;is_bot&quot;:false,&quot;first_name&quot;:&quot;\u041d\u0438\u043a\u0438\u0442\u0430&quot;,&quot;last_name&quot;:&quot;\u0420\u0430\u0437\u0443\u0432\u0430\u0435\u0432&quot;,&quot;username&quot;:&quot;neksword&quot;,&quot;language_code&quot;:&quot;en&quot;},&quot;chat&quot;:{&quot;id&quot;:583999720,&quot;first_name&quot;:&quot;\u041d\u0438\u043a\u0438\u0442\u0430&quot;,&quot;last_name&quot;:&quot;\u0420\u0430\u0437\u0443\u0432\u0430\u0435\u0432&quot;,&quot;username&quot;:&quot;neksword&quot;,&quot;type&quot;:&quot;private&quot;},&quot;date&quot;:1603977583,&quot;text&quot;:&quot;\u0443&quot;}},{&quot;update_id&quot;:606267432,
+&quot;message&quot;:{&quot;message_id&quot;:180,&quot;from&quot;:{&quot;id&quot;:583999720,&quot;is_bot&quot;:false,&quot;first_name&quot;:&quot;\u041d\u0438\u043a\u0438\u0442\u0430&quot;,&quot;last_name&quot;:&quot;\u0420\u0430\u0437\u0443\u0432\u0430\u0435\u0432&quot;,&quot;username&quot;:&quot;neksword&quot;,&quot;language_code&quot;:&quot;en&quot;},&quot;chat&quot;:{&quot;id&quot;:583999720,&quot;first_name&quot;:&quot;\u041d\u0438\u043a\u0438\u0442\u0430&quot;,&quot;last_name&quot;:&quot;\u0420\u0430\u0437\u0443\u0432\u0430\u0435\u0432&quot;,&quot;username&quot;:&quot;neksword&quot;,&quot;type&quot;:&quot;private&quot;},&quot;date&quot;:1603977585,&quot;text&quot;:&quot;\u043f\u0443\u043f&quot;}}]}; line: 1, column: 11] (through reference chain: Entity.From[&quot;ok&quot;])" type="com.fasterxml.jackson.databind.exc.UnrecognizedPropertyException">com.fasterxml.jackson.databind.exc.UnrecognizedPropertyException: Unrecognized field &quot;ok&quot; (class Entity.From), not marked as ignorable (6 known properties: &quot;is_bot&quot;, &quot;language_code&quot;, &quot;username&quot;, &quot;first_name&quot;, &quot;id&quot;, &quot;last_name&quot;])
+ at [Source: {&quot;ok&quot;:true,&quot;result&quot;:[{&quot;update_id&quot;:606267422,
+&quot;message&quot;:{&quot;message_id&quot;:170,&quot;from&quot;:{&quot;id&quot;:181695409,&quot;is_bot&quot;:false,&quot;first_name&quot;:&quot;HearthWarrio&quot;,&quot;username&quot;:&quot;HearthWarrio&quot;,&quot;language_code&quot;:&quot;ru&quot;},&quot;chat&quot;:{&quot;id&quot;:181695409,&quot;first_name&quot;:&quot;HearthWarrio&quot;,&quot;username&quot;:&quot;HearthWarrio&quot;,&quot;type&quot;:&quot;private&quot;},&quot;date&quot;:1603977550,&quot;text&quot;:&quot;/help&quot;,&quot;entities&quot;:[{&quot;offset&quot;:0,&quot;length&quot;:5,&quot;type&quot;:&quot;bot_command&quot;}]}},{&quot;update_id&quot;:606267423,
+&quot;message&quot;:{&quot;message_id&quot;:171,&quot;from&quot;:{&quot;id&quot;:583999720,&quot;is_bot&quot;:false,&quot;first_name&quot;:&quot;\u041d\u0438\u043a\u0438\u0442\u0430&quot;,&quot;last_name&quot;:&quot;\u0420\u0430\u0437\u0443\u0432\u0430\u0435\u0432&quot;,&quot;username&quot;:&quot;neksword&quot;,&quot;language_code&quot;:&quot;en&quot;},&quot;chat&quot;:{&quot;id&quot;:583999720,&quot;first_name&quot;:&quot;\u041d\u0438\u043a\u0438\u0442\u0430&quot;,&quot;last_name&quot;:&quot;\u0420\u0430\u0437\u0443\u0432\u0430\u0435\u0432&quot;,&quot;username&quot;:&quot;neksword&quot;,&quot;type&quot;:&quot;private&quot;},&quot;date&quot;:1603977582,&quot;text&quot;:&quot;\u044b\u0446\u043f\u044b\u0446\u043f&quot;}},{&quot;update_id&quot;:606267424,
+&quot;message&quot;:{&quot;message_id&quot;:172,&quot;from&quot;:{&quot;id&quot;:583999720,&quot;is_bot&quot;:false,&quot;first_name&quot;:&quot;\u041d\u0438\u043a\u0438\u0442\u0430&quot;,&quot;last_name&quot;:&quot;\u0420\u0430\u0437\u0443\u0432\u0430\u0435\u0432&quot;,&quot;username&quot;:&quot;neksword&quot;,&quot;language_code&quot;:&quot;en&quot;},&quot;chat&quot;:{&quot;id&quot;:583999720,&quot;first_name&quot;:&quot;\u041d\u0438\u043a\u0438\u0442\u0430&quot;,&quot;last_name&quot;:&quot;\u0420\u0430\u0437\u0443\u0432\u0430\u0435\u0432&quot;,&quot;username&quot;:&quot;neksword&quot;,&quot;type&quot;:&quot;private&quot;},&quot;date&quot;:1603977582,&quot;text&quot;:&quot;\u043f&quot;}},{&quot;update_id&quot;:606267425,
+&quot;message&quot;:{&quot;message_id&quot;:173,&quot;from&quot;:{&quot;id&quot;:583999720,&quot;is_bot&quot;:false,&quot;first_name&quot;:&quot;\u041d\u0438\u043a\u0438\u0442\u0430&quot;,&quot;last_name&quot;:&quot;\u0420\u0430\u0437\u0443\u0432\u0430\u0435\u0432&quot;,&quot;username&quot;:&quot;neksword&quot;,&quot;language_code&quot;:&quot;en&quot;},&quot;chat&quot;:{&quot;id&quot;:583999720,&quot;first_name&quot;:&quot;\u041d\u0438\u043a\u0438\u0442\u0430&quot;,&quot;last_name&quot;:&quot;\u0420\u0430\u0437\u0443\u0432\u0430\u0435\u0432&quot;,&quot;username&quot;:&quot;neksword&quot;,&quot;type&quot;:&quot;private&quot;},&quot;date&quot;:1603977582,&quot;text&quot;:&quot;\u0443\u043a\u043f\u0443&quot;}},{&quot;update_id&quot;:606267426,
+&quot;message&quot;:{&quot;message_id&quot;:174,&quot;from&quot;:{&quot;id&quot;:583999720,&quot;is_bot&quot;:false,&quot;first_name&quot;:&quot;\u041d\u0438\u043a\u0438\u0442\u0430&quot;,&quot;last_name&quot;:&quot;\u0420\u0430\u0437\u0443\u0432\u0430\u0435\u0432&quot;,&quot;username&quot;:&quot;neksword&quot;,&quot;language_code&quot;:&quot;en&quot;},&quot;chat&quot;:{&quot;id&quot;:583999720,&quot;first_name&quot;:&quot;\u041d\u0438\u043a\u0438\u0442\u0430&quot;,&quot;last_name&quot;:&quot;\u0420\u0430\u0437\u0443\u0432\u0430\u0435\u0432&quot;,&quot;username&quot;:&quot;neksword&quot;,&quot;type&quot;:&quot;private&quot;},&quot;date&quot;:1603977583,&quot;text&quot;:&quot;\u043f&quot;}},{&quot;update_id&quot;:606267427,
+&quot;message&quot;:{&quot;message_id&quot;:175,&quot;from&quot;:{&quot;id&quot;:583999720,&quot;is_bot&quot;:false,&quot;first_name&quot;:&quot;\u041d\u0438\u043a\u0438\u0442\u0430&quot;,&quot;last_name&quot;:&quot;\u0420\u0430\u0437\u0443\u0432\u0430\u0435\u0432&quot;,&quot;username&quot;:&quot;neksword&quot;,&quot;language_code&quot;:&quot;en&quot;},&quot;chat&quot;:{&quot;id&quot;:583999720,&quot;first_name&quot;:&quot;\u041d\u0438\u043a\u0438\u0442\u0430&quot;,&quot;last_name&quot;:&quot;\u0420\u0430\u0437\u0443\u0432\u0430\u0435\u0432&quot;,&quot;username&quot;:&quot;neksword&quot;,&quot;type&quot;:&quot;private&quot;},&quot;date&quot;:1603977583,&quot;text&quot;:&quot;\u0443\u043f&quot;}},{&quot;update_id&quot;:606267428,
+&quot;message&quot;:{&quot;message_id&quot;:176,&quot;from&quot;:{&quot;id&quot;:583999720,&quot;is_bot&quot;:false,&quot;first_name&quot;:&quot;\u041d\u0438\u043a\u0438\u0442\u0430&quot;,&quot;last_name&quot;:&quot;\u0420\u0430\u0437\u0443\u0432\u0430\u0435\u0432&quot;,&quot;username&quot;:&quot;neksword&quot;,&quot;language_code&quot;:&quot;en&quot;},&quot;chat&quot;:{&quot;id&quot;:583999720,&quot;first_name&quot;:&quot;\u041d\u0438\u043a\u0438\u0442\u0430&quot;,&quot;last_name&quot;:&quot;\u0420\u0430\u0437\u0443\u0432\u0430\u0435\u0432&quot;,&quot;username&quot;:&quot;neksword&quot;,&quot;type&quot;:&quot;private&quot;},&quot;date&quot;:1603977583,&quot;text&quot;:&quot;\u0443&quot;}},{&quot;update_id&quot;:606267429,
+&quot;message&quot;:{&quot;message_id&quot;:177,&quot;from&quot;:{&quot;id&quot;:583999720,&quot;is_bot&quot;:false,&quot;first_name&quot;:&quot;\u041d\u0438\u043a\u0438\u0442\u0430&quot;,&quot;last_name&quot;:&quot;\u0420\u0430\u0437\u0443\u0432\u0430\u0435\u0432&quot;,&quot;username&quot;:&quot;neksword&quot;,&quot;language_code&quot;:&quot;en&quot;},&quot;chat&quot;:{&quot;id&quot;:583999720,&quot;first_name&quot;:&quot;\u041d\u0438\u043a\u0438\u0442\u0430&quot;,&quot;last_name&quot;:&quot;\u0420\u0430\u0437\u0443\u0432\u0430\u0435\u0432&quot;,&quot;username&quot;:&quot;neksword&quot;,&quot;type&quot;:&quot;private&quot;},&quot;date&quot;:1603977583,&quot;text&quot;:&quot;\u043f\u0443&quot;}},{&quot;update_id&quot;:606267430,
+&quot;message&quot;:{&quot;message_id&quot;:178,&quot;from&quot;:{&quot;id&quot;:583999720,&quot;is_bot&quot;:false,&quot;first_name&quot;:&quot;\u041d\u0438\u043a\u0438\u0442\u0430&quot;,&quot;last_name&quot;:&quot;\u0420\u0430\u0437\u0443\u0432\u0430\u0435\u0432&quot;,&quot;username&quot;:&quot;neksword&quot;,&quot;language_code&quot;:&quot;en&quot;},&quot;chat&quot;:{&quot;id&quot;:583999720,&quot;first_name&quot;:&quot;\u041d\u0438\u043a\u0438\u0442\u0430&quot;,&quot;last_name&quot;:&quot;\u0420\u0430\u0437\u0443\u0432\u0430\u0435\u0432&quot;,&quot;username&quot;:&quot;neksword&quot;,&quot;type&quot;:&quot;private&quot;},&quot;date&quot;:1603977583,&quot;text&quot;:&quot;\u043f&quot;}},{&quot;update_id&quot;:606267431,
+&quot;message&quot;:{&quot;message_id&quot;:179,&quot;from&quot;:{&quot;id&quot;:583999720,&quot;is_bot&quot;:false,&quot;first_name&quot;:&quot;\u041d\u0438\u043a\u0438\u0442\u0430&quot;,&quot;last_name&quot;:&quot;\u0420\u0430\u0437\u0443\u0432\u0430\u0435\u0432&quot;,&quot;username&quot;:&quot;neksword&quot;,&quot;language_code&quot;:&quot;en&quot;},&quot;chat&quot;:{&quot;id&quot;:583999720,&quot;first_name&quot;:&quot;\u041d\u0438\u043a\u0438\u0442\u0430&quot;,&quot;last_name&quot;:&quot;\u0420\u0430\u0437\u0443\u0432\u0430\u0435\u0432&quot;,&quot;username&quot;:&quot;neksword&quot;,&quot;type&quot;:&quot;private&quot;},&quot;date&quot;:1603977583,&quot;text&quot;:&quot;\u0443&quot;}},{&quot;update_id&quot;:606267432,
+&quot;message&quot;:{&quot;message_id&quot;:180,&quot;from&quot;:{&quot;id&quot;:583999720,&quot;is_bot&quot;:false,&quot;first_name&quot;:&quot;\u041d\u0438\u043a\u0438\u0442\u0430&quot;,&quot;last_name&quot;:&quot;\u0420\u0430\u0437\u0443\u0432\u0430\u0435\u0432&quot;,&quot;username&quot;:&quot;neksword&quot;,&quot;language_code&quot;:&quot;en&quot;},&quot;chat&quot;:{&quot;id&quot;:583999720,&quot;first_name&quot;:&quot;\u041d\u0438\u043a\u0438\u0442\u0430&quot;,&quot;last_name&quot;:&quot;\u0420\u0430\u0437\u0443\u0432\u0430\u0435\u0432&quot;,&quot;username&quot;:&quot;neksword&quot;,&quot;type&quot;:&quot;private&quot;},&quot;date&quot;:1603977585,&quot;text&quot;:&quot;\u043f\u0443\u043f&quot;}}]}; line: 1, column: 11] (through reference chain: Entity.From[&quot;ok&quot;])
+	at com.fasterxml.jackson.databind.exc.UnrecognizedPropertyException.from(UnrecognizedPropertyException.java:62)
+	at com.fasterxml.jackson.databind.DeserializationContext.handleUnknownProperty(DeserializationContext.java:834)
+	at com.fasterxml.jackson.databind.deser.std.StdDeserializer.handleUnknownProperty(StdDeserializer.java:1093)
+	at com.fasterxml.jackson.databind.deser.BeanDeserializerBase.handleUnknownProperty(BeanDeserializerBase.java:1485)
+	at com.fasterxml.jackson.databind.deser.BeanDeserializerBase.handleUnknownVanilla(BeanDeserializerBase.java:1463)
+	at com.fasterxml.jackson.databind.deser.BeanDeserializer.vanillaDeserialize(BeanDeserializer.java:282)
+	at com.fasterxml.jackson.databind.deser.BeanDeserializer.deserialize(BeanDeserializer.java:140)
+	at com.fasterxml.jackson.databind.ObjectMapper._readMapAndClose(ObjectMapper.java:3798)
+	at com.fasterxml.jackson.databind.ObjectMapper.readValue(ObjectMapper.java:2880)
+	at com.fasterxml.jackson.databind.ObjectMapper$readValue$0.call(Unknown Source)
+	at org.codehaus.groovy.runtime.callsite.CallSiteArray.defaultCall(CallSiteArray.java:47)
+	at org.codehaus.groovy.runtime.callsite.AbstractCallSite.call(AbstractCallSite.java:115)
+	at org.codehaus.groovy.runtime.callsite.AbstractCallSite.call(AbstractCallSite.java:135)
+	at io.restassured.internal.path.json.mapping.JsonPathJackson2ObjectDeserializer.deserialize(JsonPathJackson2ObjectDeserializer.groovy:46)
+	at io.restassured.path.json.mapping.JsonPathObjectDeserializer$deserialize.call(Unknown Source)
+	at org.codehaus.groovy.runtime.callsite.CallSiteArray.defaultCall(CallSiteArray.java:47)
+	at org.codehaus.groovy.runtime.callsite.AbstractCallSite.call(AbstractCallSite.java:115)
+	at org.codehaus.groovy.runtime.callsite.AbstractCallSite.call(AbstractCallSite.java:127)
+	at io.restassured.internal.mapping.Jackson2Mapper.deserialize(Jackson2Mapper.groovy:58)
+	at io.restassured.mapper.ObjectMapper$deserialize.call(Unknown Source)
+	at org.codehaus.groovy.runtime.callsite.CallSiteArray.defaultCall(CallSiteArray.java:47)
+	at org.codehaus.groovy.runtime.callsite.AbstractCallSite.call(AbstractCallSite.java:115)
+	at org.codehaus.groovy.runtime.callsite.AbstractCallSite.call(AbstractCallSite.java:127)
+	at io.restassured.internal.mapping.ObjectMapping.parseWithJackson2(ObjectMapping.groovy:221)
+	at io.restassured.internal.mapping.ObjectMapping$parseWithJackson2$0.callStatic(Unknown Source)
+	at org.codehaus.groovy.runtime.callsite.CallSiteArray.defaultCallStatic(CallSiteArray.java:55)
+	at org.codehaus.groovy.runtime.callsite.AbstractCallSite.callStatic(AbstractCallSite.java:196)
+	at org.codehaus.groovy.runtime.callsite.AbstractCallSite.callStatic(AbstractCallSite.java:216)
+	at io.restassured.internal.mapping.ObjectMapping.deserialize(ObjectMapping.groovy:58)
+	at io.restassured.internal.mapping.ObjectMapping$deserialize.call(Unknown Source)
+	at org.codehaus.groovy.runtime.callsite.CallSiteArray.defaultCall(CallSiteArray.java:47)
+	at org.codehaus.groovy.runtime.callsite.AbstractCallSite.call(AbstractCallSite.java:115)
+	at io.restassured.internal.RestAssuredResponseOptionsGroovyImpl.as(RestAssuredResponseOptionsGroovyImpl.groovy:224)
+	at io.restassured.internal.RestAssuredResponseOptionsImpl.as(RestAssuredResponseOptionsImpl.java:169)
+	at TestClass.DoTest(TestClass.java:12)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:567)
+	at org.junit.runners.model.FrameworkMethod$1.runReflectiveCall(FrameworkMethod.java:59)
+	at org.junit.internal.runners.model.ReflectiveCallable.run(ReflectiveCallable.java:12)
+	at org.junit.runners.model.FrameworkMethod.invokeExplosively(FrameworkMethod.java:56)
+	at org.junit.internal.runners.statements.InvokeMethod.evaluate(InvokeMethod.java:17)
+	at org.junit.runners.ParentRunner$3.evaluate(ParentRunner.java:306)
+	at org.junit.runners.BlockJUnit4ClassRunner$1.evaluate(BlockJUnit4ClassRunner.java:100)
+	at org.junit.runners.ParentRunner.runLeaf(ParentRunner.java:366)
+	at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:103)
+	at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:63)
+	at org.junit.runners.ParentRunner$4.run(ParentRunner.java:331)
+	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:79)
+	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:329)
+	at org.junit.runners.ParentRunner.access$100(ParentRunner.java:66)
+	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:293)
+	at org.junit.runners.ParentRunner$3.evaluate(ParentRunner.java:306)
+	at org.junit.runners.ParentRunner.run(ParentRunner.java:413)
+	at org.apache.maven.surefire.junit4.JUnit4Provider.execute(JUnit4Provider.java:252)
+	at org.apache.maven.surefire.junit4.JUnit4Provider.executeTestSet(JUnit4Provider.java:141)
+	at org.apache.maven.surefire.junit4.JUnit4Provider.invoke(JUnit4Provider.java:112)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:567)
+	at org.apache.maven.surefire.util.ReflectionUtils.invokeMethodWithArray(ReflectionUtils.java:189)
+	at org.apache.maven.surefire.booter.ProviderFactory$ProviderProxy.invoke(ProviderFactory.java:165)
+	at org.apache.maven.surefire.booter.ProviderFactory.invokeProvider(ProviderFactory.java:85)
+	at org.apache.maven.surefire.booter.ForkedBooter.runSuitesInProcess(ForkedBooter.java:115)
+	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:75)
+</error>
+  </testcase>
+</testsuite>
