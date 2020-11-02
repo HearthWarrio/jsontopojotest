@@ -1,27 +1,25 @@
 import Entity.From;
-import com.google.gson.Gson;
+import io.restassured.RestAssured;
+import org.junit.Assert;
 import org.junit.Test;
-
 import java.io.IOException;
-import java.io.InputStream;
-import java.io.InputStreamReader;
-import java.io.Reader;
-import java.net.URL;
-import java.nio.charset.StandardCharsets;
 
-public class TestClass{
+public class TestClass {
+    String webPage = "https://api.telegram.org/botSomeToken/getUpdates";
 
     @Test
-    public void DoTest() throws IOException {
-
-        String webPage = "https://api.telegram.org/botSomeToken/getUpdates";
-
-        try (InputStream is = new URL(webPage).openStream();
-             Reader reader = new InputStreamReader(is, StandardCharsets.UTF_8)) {
-            Gson gson = new Gson();
-            From first_name = gson.fromJson(reader, From.class);
-
-            System.out.println(first_name);
+    public void DoTest2() throws IOException {
+        try {
+            From from = RestAssured.given()
+                    .when()
+                    .get("result")
+                    .body()
+                    .jsonPath()
+                    .getObject("result", From.class);
+            System.out.println(from);
+            Assert.assertEquals("HearthWarrio", from.getFirst_name());
+        } catch (Exception e) {
+            e.printStackTrace();
         }
     }
 }
