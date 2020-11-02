@@ -6,7 +6,7 @@ import java.util.List;
 
 public class Message {
     public int message_id;
-    public List<From> from;
+    public List<User> user;
     public Chat chat;
     public int date;
     public String text;
@@ -20,12 +20,12 @@ public class Message {
         this.message_id = message_id;
     }
 
-    public List<From> getFrom() {
-        return from;
+    public List<User> getUser() {
+        return user;
     }
 
-    public void setFrom(List<From> from) {
-        this.from = from;
+    public void setUser(List<User> user) {
+        this.user = user;
     }
 
     public Chat getChat() {
@@ -64,7 +64,7 @@ public class Message {
     public String toString() {
         return "Message{" +
                 "message_id=" + message_id +
-                ", from=" + from +
+                ", from=" + user +
                 ", chat=" + chat +
                 ", date=" + date +
                 ", text='" + text + '\'' +
