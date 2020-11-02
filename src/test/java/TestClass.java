@@ -4,7 +4,7 @@ import org.junit.Assert;
 import org.junit.Test;
 
 public class TestClass {
-    String webPage = "https://api.telegram.org/bot1030325998:AAERsCxzhfoUrBmj9wYZkDsO0G_Zi7XC7Dw/getUpdates";
+    String webPage = "https://api.telegram.org/botSomeToken/getUpdates";
 
     @Test
     public void DoTest2() {
