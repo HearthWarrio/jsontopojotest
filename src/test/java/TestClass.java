@@ -69,7 +69,7 @@ public class TestClass {
     public void  DoTest6() throws SQLException {
         final Connection connection = DriverManager.getConnection(url, userlogin, password);
         try (Statement statement = connection.createStatement()) {
-            final ResultSet resultSet = statement.executeQuery("SELECT user_id FROM telegramapitest ORDER BY id ASC");
+            final ResultSet resultSet = statement.executeQuery("SELECT * FROM telegramapitest");
             while (resultSet.next()) {
                 int id = resultSet.getInt("id");
                 String user_id = resultSet.getString("user_id");
