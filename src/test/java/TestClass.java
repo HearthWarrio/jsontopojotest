@@ -1,10 +1,9 @@
-import Entity.Message;
+iimport Entity.Message;
 import Entity.Result;
 import Entity.User;
 import io.restassured.RestAssured;
 import org.junit.Assert;
 import org.junit.Test;
-
 import java.sql.*;
 
 public class TestClass {
@@ -13,11 +12,9 @@ public class TestClass {
     final String password = "password";
     final String url = "jdbc:postgresql://ec2-18-211-48-247.compute-1.amazonaws.com:5432/d4h4hpps2bnuvu";
     long id = 0;
-    String SQLInput = "INSERT INTO telegramapitest (id, update_id, user_id, user_message ";
 
     @Test
     public void DoTest0() {
-        try {
             User user = RestAssured.given()
                     .when()
                     .get("result")
@@ -26,14 +23,10 @@ public class TestClass {
                     .getObject("result", User.class);
             System.out.println(user);
             Assert.assertEquals("HearthWarrio", user.getFirst_name());
-        } catch (Exception e) {
-            e.printStackTrace();
-        }
     }
 
     @Test
     public void DoTest1() {
-        try {
             Message message = RestAssured.given()
                     .when()
                     .get("result")
@@ -41,14 +34,11 @@ public class TestClass {
                     .jsonPath()
                     .getObject("result", Message.class);
             System.out.println(message);
-        } catch (Exception e) {
-            e.printStackTrace();
-        }
+
     }
 
     @Test
     public void DoTest2() {
-        try {
             Result result = RestAssured.given()
                     .when()
                     .get("result")
@@ -56,22 +46,32 @@ public class TestClass {
                     .jsonPath()
                     .getObject("result", Result.class);
             System.out.println(result);
-        } catch (Exception e) {
-            e.printStackTrace();
-        }
     }
 
     @Test
     public void DoTest5() throws SQLException {
+        Result result = new Result();
+        User user = new User();
+        Message message = new Message();
+        String user_id = user.getUsername();
+        int update_id = result.getUpdate_id();
+        String user_message = message.getText();
 
         final Connection connection = DriverManager.getConnection(url, userlogin, password);
-
-        try (PreparedStatement statement = connection.prepareStatement(SQLInput,Statement.RETURN_GENERATED_KEYS)) {
-            prepareStatement.setString(1, Result.getUpdate_id, User.getUsername, Message.getText);
-
+            try (Statement statement = connection.createStatement()) {
+                statement.executeUpdate("INSERT INTO telegramapitest " + id + update_id + user_id + user_message, statement.RETURN_GENERATED_KEYS);
+            }  finally {
+                    connection.close();
         }
-        finally {
-            connection.close();
+    }
+
+    @Test
+    public void  DoTest6() throws SQLException {
+        final Connection connection = DriverManager.getConnection(url, userlogin, password);
+        try (Statement statement = connection.createStatement()) {
+            statement.execute("SELECT user_id FROM telegramapitest ORDER BY id ASC");
+        } finally {
+                connection.close();
         }
     }
 }
