@@ -47,9 +47,11 @@ public class TestClass {
                     .getObject("result", Result.class);
             System.out.println(result);
     }
+    
+
 
     @Test
-    public void DoTest5() throws SQLException {
+    public void DoTest3() throws SQLException {
         Result result = new Result();
         User user = new User();
         Message message = new Message();
@@ -63,10 +65,26 @@ public class TestClass {
             }  finally {
                     connection.close();
         }
+        
     }
+        @Test
+    public void DoTest4 () throws SQLException {
+        final Connection connection = DriverManager.getConnection(url, userlogin, password);
+        Calendar calendar = Calendar.getInstance();
+        java.sql.Timestamp timestampObject = new java.sql.Timestamp(calendar.getTime().getTime());
+        String sql = "INSERT INTO telegramapitest (update_time) VALUES (?)";
 
+        try(PreparedStatement preparedStatement = connection.prepareStatement(sql)) {
+            preparedStatement.setTimestamp(1, timestampObject);
+            preparedStatement.executeUpdate();
+            preparedStatement.close();
+        } finally {
+            connection.close();
+        }
+    }
+    
     @Test
-    public void  DoTest6() throws SQLException {
+    public void  DoTest5() throws SQLException {
         final Connection connection = DriverManager.getConnection(url, userlogin, password);
         try (Statement statement = connection.createStatement()) {
             final ResultSet resultSet = statement.executeQuery("SELECT * FROM telegramapitest");
