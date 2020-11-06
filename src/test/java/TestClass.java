@@ -75,9 +75,18 @@ public class TestClass {
                 String user_id = resultSet.getString("user_id");
                 System.out.println("ID: " + id);
                 System.out.println("User ID:" + user_id);
-            }
-        } finally {
+            } try {
+                resultSet.close();
+                statement.close();
                 connection.close();
+            } finally {
+                if (statement != null) {
+                    statement.close();
+                }
+                if (connection != null) {
+                    connection.close();
+                }
+            }
         }
     }
 }
