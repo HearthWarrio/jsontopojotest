@@ -9,18 +9,23 @@ public class TestClass {
 
     @Test
     public void UserSerializationTest() {
-            serialize.UserSerialization();
+
+        serialize.UserSerialization();
+
     }
 
     @Test
     public void MessageSerializationTest() {
+
         serialize.MessageSerialization();
 
     }
 
     @Test
     public void ResultSerializationTest() {
-            serialize.ResultSerialization();
+
+        serialize.ResultSerialization();
+
     }
 
     @Test
