@@ -8,12 +8,13 @@ import io.restassured.RestAssured;
 import java.util.Objects;
 
 public class Serialization {
+    String webPage = "https://api.telegram.org/botSomeToken/getUpdates";
     public final Logger log = LogManager.getLogger(Serialization.class);
 
     public void MessageSerialization() {
         Message message = RestAssured.given()
                 .when()
-                .get("result")
+                .get(webPage)
                 .body()
                 .jsonPath()
                 .getObject("result", Message.class);
@@ -32,7 +33,7 @@ public class Serialization {
     public void UserSerialization() {
         User user = RestAssured.given()
                 .when()
-                .get("result")
+                .get(webPage)
                 .body()
                 .jsonPath()
                 .getObject("result", User.class);
@@ -51,7 +52,7 @@ public class Serialization {
     public void ResultSerialization() {
         Result result = RestAssured.given()
                 .when()
-                .get("result")
+                .get(webPage)
                 .body()
                 .jsonPath()
                 .getObject("result", Result.class);
