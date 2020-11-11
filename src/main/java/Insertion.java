@@ -11,27 +11,11 @@ public class Insertion {
     final String userlogin = "user";
     final String password = "password";
     final String url = "jdbc:postgresql://ec2-18-211-48-247.compute-1.amazonaws.com:5432/d4h4hpps2bnuvu";
-    Result result = RestAssured
-            .given()
-            .when()
-            .get(webPage)
-            .body()
-            .jsonPath()
-            .getObject("result", Result.class);
-    User user = RestAssured
-            .given()
-            .when()
-            .get(webPage)
-            .body()
-            .jsonPath()
-            .getObject("result", User.class);
-    Message message = RestAssured
-            .given()
-            .when()
-            .get(webPage)
-            .body()
-            .jsonPath()
-            .getObject("result", Message.class);
+    public static Serialization serialize;
+
+    Result result = (Result) serialize.serialization(Result.class);
+    User user = (User) serialize.serialization(User.class);
+    Message message = (Message) serialize.serialization(Message.class);
     int id = 0;
 
     public void InsertDataToDatabase() throws SQLException {
@@ -41,10 +25,7 @@ public class Insertion {
         final Connection connection = DriverManager.getConnection(url, userlogin, password);
         try (Statement statement = connection.createStatement()) {
             statement.executeUpdate("INSERT INTO telegramapitest " + id + update_id + user_id + user_message, statement.RETURN_GENERATED_KEYS);
-        }  finally {
-            connection.close();
         }
-
     }
 
     public void InsertUpdateTimeToDatabase() throws SQLException {
@@ -59,12 +40,20 @@ public class Insertion {
             preparedStatement.setTimestamp(1, timestampObject);
             preparedStatement.executeUpdate();
 
-        } finally {
-
-            connection.close();
-
         }
+    }
 
+    public void SelectFromDatabase() throws SQLException {
+        final Connection connection = DriverManager.getConnection(url, userlogin, password);
+        try (Statement statement = connection.createStatement()) {
+            final ResultSet resultSet = statement.executeQuery("SELECT * FROM telegramapitest");
+            while (resultSet.next()) {
+                int id = resultSet.getInt("id");
+                String user_id = resultSet.getString("user_id");
+                System.out.println("ID: " + id);
+                System.out.println("User ID:" + user_id);
+            }
+        }
     }
 }
 

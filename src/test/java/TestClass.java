@@ -1,30 +1,41 @@
+import Entity.Message;
+import Entity.Result;
+import Entity.User;
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
 import org.junit.Test;
 import java.sql.*;
 
 
 public class TestClass {
+    public final Logger log = LogManager.getLogger(TestClass.class);
     public static Serialization serialize;
     public static Insertion insert;
-    public static Select select;
 
     @Test
     public void UserSerializationTest() {
 
-        serialize.UserSerialization();
+        serialize.serialization(User.class);
+
+        log.info("Serialization of User passed");
 
     }
 
     @Test
     public void MessageSerializationTest() {
 
-        serialize.MessageSerialization();
+        serialize.serialization(Message.class);
+
+        log.info("Serialization of Message passed");
 
     }
 
     @Test
     public void ResultSerializationTest() {
 
-        serialize.ResultSerialization();
+        serialize.serialization(Result.class);
+
+        log.info("Serialization of Result passed");
 
     }
 
@@ -45,7 +56,7 @@ public class TestClass {
     @Test
     public void  SelectFromDatabaseTest() throws SQLException {
 
-        select.SelectFromDatabase();
+        insert.SelectFromDatabase();
 
     }
 }
