@@ -15,13 +15,9 @@ public class Insertion {
     int id = 0;
 
     public void InsertDataToDatabase() throws SQLException {
-        User user = serialize.serialization(new TypeRef<User>() {});
-        Result result = serialize.serialization(new TypeRef<Result>() {});
-        Message message = serialize.serialization(new TypeRef<Message>() {});
-
-        String user_id = user.getUsername();
-        int update_id = result.getUpdate_id();
-        String user_message = message.getText();
+       String user_id = serialize.serialization(new TypeRef<User>() {}).getUsername();
+        int update_id = serialize.serialization(new TypeRef<Result>() {}).getUpdate_id();
+        String user_message = serialize.serialization(new TypeRef<Message>() {}).getText();
         final Connection connection = DriverManager.getConnection(url, userlogin, password);
         try (Statement statement = connection.createStatement()) {
             statement.executeUpdate("INSERT INTO telegramapitest " + id + update_id + user_id + user_message, statement.RETURN_GENERATED_KEYS);
