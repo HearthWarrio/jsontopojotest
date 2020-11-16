@@ -1,6 +1,7 @@
 import Entity.Message;
 import Entity.Result;
 import Entity.User;
+import io.restassured.common.mapper.TypeRef;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 import org.junit.Test;
@@ -9,33 +10,34 @@ import java.sql.*;
 
 public class TestClass {
     public final Logger log = LogManager.getLogger(TestClass.class);
-    public static Serialization serialize;
-    public static Insertion insert;
+    public Serialization serialize = new Serialization();
+    public Insertion insert = new Insertion();
 
     @Test
-    public void UserSerializationTest() {
+    public void ResultSerializationTest() {
 
-        serialize.serialization(User.class);
+        serialize.serialization(new TypeRef<Result>() {});
 
-        log.info("Serialization of User passed");
+        log.info("Serialization of Result passed");
 
     }
+
 
     @Test
     public void MessageSerializationTest() {
 
-        serialize.serialization(Message.class);
+        serialize.serialization(new TypeRef<Message>() {});
 
         log.info("Serialization of Message passed");
 
     }
 
     @Test
-    public void ResultSerializationTest() {
+    public void UserSerializationTest() {
 
-        serialize.serialization(Result.class);
+        serialize.serialization(new TypeRef<User>() {});
 
-        log.info("Serialization of Result passed");
+        log.info("Serialization of User passed");
 
     }
 

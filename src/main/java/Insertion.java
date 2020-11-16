@@ -1,24 +1,24 @@
 import Entity.Message;
 import Entity.Result;
 import Entity.User;
-import io.restassured.RestAssured;
+import io.restassured.common.mapper.TypeRef;
+
 
 import java.sql.*;
 import java.util.Calendar;
 
 public class Insertion {
-    String webPage = "https://api.telegram.org/botSomeToken/getUpdates";
     final String userlogin = "user";
     final String password = "password";
     final String url = "jdbc:postgresql://ec2-18-211-48-247.compute-1.amazonaws.com:5432/d4h4hpps2bnuvu";
-    public static Serialization serialize;
-
-    Result result = (Result) serialize.serialization(Result.class);
-    User user = (User) serialize.serialization(User.class);
-    Message message = (Message) serialize.serialization(Message.class);
+    public Serialization serialize = new Serialization();
     int id = 0;
 
     public void InsertDataToDatabase() throws SQLException {
+        User user = serialize.serialization(new TypeRef<User>() {});
+        Result result = serialize.serialization(new TypeRef<Result>() {});
+        Message message = serialize.serialization(new TypeRef<Message>() {});
+
         String user_id = user.getUsername();
         int update_id = result.getUpdate_id();
         String user_message = message.getText();
