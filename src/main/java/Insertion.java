@@ -4,6 +4,7 @@ import Entity.User;
 import io.restassured.common.mapper.TypeRef;
 
 
+import javax.xml.crypto.Data;
 import java.sql.*;
 import java.util.Calendar;
 
@@ -15,12 +16,10 @@ public class Insertion {
     int id = 0;
 
     public void InsertDataToDatabase() throws SQLException {
-        String user_id = serialize.serialization(new TypeRef<User>() {}).getUsername();
-        int update_id = serialize.serialization(new TypeRef<Result>() {}).getUpdate_id();
-        String user_message = serialize.serialization(new TypeRef<Message>() {}).getText();
         final Connection connection = DriverManager.getConnection(url, userlogin, password);
         try (Statement statement = connection.createStatement()) {
-            statement.executeUpdate("INSERT INTO telegramapitest " + id + update_id + user_id + user_message, statement.RETURN_GENERATED_KEYS);
+            statement.executeUpdate("INSERT INTO telegramapitest " + id + DataForOperations.update_id +
+                    DataForOperations.user_id + DataForOperations.user_message, statement.RETURN_GENERATED_KEYS);
         }
     }
 
