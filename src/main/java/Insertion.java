@@ -1,10 +1,3 @@
-import Entity.Message;
-import Entity.Result;
-import Entity.User;
-import io.restassured.common.mapper.TypeRef;
-
-
-import javax.xml.crypto.Data;
 import java.sql.*;
 import java.util.Calendar;
 
@@ -12,14 +5,13 @@ public class Insertion {
     final String userlogin = "user";
     final String password = "password";
     final String url = "jdbc:postgresql://ec2-18-211-48-247.compute-1.amazonaws.com:5432/d4h4hpps2bnuvu";
-    public Serialization serialize = new Serialization();
     int id = 0;
 
-    public void InsertDataToDatabase() throws SQLException {
+    public void InsertDataToDatabase(String user_id, String user_message, int update_id) throws SQLException {
         final Connection connection = DriverManager.getConnection(url, userlogin, password);
         try (Statement statement = connection.createStatement()) {
-            statement.executeUpdate("INSERT INTO telegramapitest " + id + DataForOperations.update_id +
-                    DataForOperations.user_id + DataForOperations.user_message, statement.RETURN_GENERATED_KEYS);
+            statement.executeUpdate("INSERT INTO telegramapitest " + id + update_id +
+                    user_id + user_message, statement.RETURN_GENERATED_KEYS);
         }
     }
 

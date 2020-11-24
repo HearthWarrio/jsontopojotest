@@ -17,6 +17,7 @@ public class TestClass {
     public void ResultSerializationTest() {
 
         serialize.serialization(new TypeRef<Result>() {});
+        int update_id = serialize.serialization(new TypeRef<Result>() {}).getUpdate_id();
 
         log.info("Serialization of Result passed");
 
@@ -27,6 +28,7 @@ public class TestClass {
     public void MessageSerializationTest() {
 
         serialize.serialization(new TypeRef<Message>() {});
+        String user_message = serialize.serialization(new TypeRef<Message>() {}).getText();
 
         log.info("Serialization of Message passed");
 
@@ -36,15 +38,16 @@ public class TestClass {
     public void UserSerializationTest() {
 
         serialize.serialization(new TypeRef<User>() {});
+        String user_id = serialize.serialization(new TypeRef<User>() {}).getUsername();
 
         log.info("Serialization of User passed");
 
     }
 
     @Test
-    public void InsertDataToDatabaseTest() throws SQLException {
+    public void InsertDataToDatabaseTest(String user_id, String user_message, int update_id) throws SQLException {
 
-        insert.InsertDataToDatabase();
+        insert.InsertDataToDatabase(user_id, user_message, update_id);
 
     }
 
