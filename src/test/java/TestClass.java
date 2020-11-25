@@ -4,6 +4,7 @@ import Entity.User;
 import io.restassured.common.mapper.TypeRef;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
+import org.junit.Assert;
 import org.junit.Test;
 import java.sql.*;
 
@@ -12,12 +13,16 @@ public class TestClass {
     public final Logger log = LogManager.getLogger(TestClass.class);
     public Serialization serialize = new Serialization();
     public Insertion insert = new Insertion();
+    Result a = serialize.serialization(new TypeRef<Result>() {});
+    Message b = serialize.serialization(new TypeRef<Message>() {});
+    User c = serialize.serialization(new TypeRef<User>() {});;
 
     @Test
     public void ResultSerializationTest() {
 
         serialize.serialization(new TypeRef<Result>() {});
-        int update_id = serialize.serialization(new TypeRef<Result>() {}).getUpdate_id();
+        int update_id = a.getUpdate_id();
+        Assert.assertEquals(update_id, "606267504");
 
         log.info("Serialization of Result passed");
 
@@ -28,7 +33,8 @@ public class TestClass {
     public void MessageSerializationTest() {
 
         serialize.serialization(new TypeRef<Message>() {});
-        String user_message = serialize.serialization(new TypeRef<Message>() {}).getText();
+        String user_message = b.getText();
+        Assert.assertEquals(user_message, "sdghsdghgsfdh");
 
         log.info("Serialization of Message passed");
 
@@ -38,14 +44,19 @@ public class TestClass {
     public void UserSerializationTest() {
 
         serialize.serialization(new TypeRef<User>() {});
-        String user_id = serialize.serialization(new TypeRef<User>() {}).getUsername();
+        String user_id = c.getUsername();
+        Assert.assertEquals(user_id, "HearthWarrio");
 
         log.info("Serialization of User passed");
 
     }
 
     @Test
-    public void InsertDataToDatabaseTest(String user_id, String user_message, int update_id) throws SQLException {
+    public void InsertDataToDatabaseTest() throws SQLException {
+
+        String user_id = c.getUsername();
+        String user_message = b.getText();
+        int update_id = a.getUpdate_id();
 
         insert.InsertDataToDatabase(user_id, user_message, update_id);
 
@@ -62,6 +73,7 @@ public class TestClass {
     public void  SelectFromDatabaseTest() throws SQLException {
 
         insert.SelectFromDatabase();
+        Assert.assertEquals(c.getUsername(), "HearthWarrio");
 
     }
 }
