@@ -13,15 +13,14 @@ public class TestClass {
     public final Logger log = LogManager.getLogger(TestClass.class);
     public Serialization serialize = new Serialization();
     public Insertion insert = new Insertion();
-    Result a = serialize.serialization(new TypeRef<Result>() {});
-    Message b = serialize.serialization(new TypeRef<Message>() {});
-    User c = serialize.serialization(new TypeRef<User>() {});;
+
+
+
 
     @Test
     public void ResultSerializationTest() {
-
-        serialize.serialization(new TypeRef<Result>() {});
-        int update_id = a.getUpdate_id();
+        Result result = serialize.serialization(new TypeRef<Result>() {});
+        int update_id = result.getUpdate_id();
         Assert.assertEquals(update_id, "606267504");
 
         log.info("Serialization of Result passed");
@@ -31,9 +30,8 @@ public class TestClass {
 
     @Test
     public void MessageSerializationTest() {
-
-        serialize.serialization(new TypeRef<Message>() {});
-        String user_message = b.getText();
+        Message message = serialize.serialization(new TypeRef<Message>() {});
+        String user_message = message.getText();
         Assert.assertEquals(user_message, "sdghsdghgsfdh");
 
         log.info("Serialization of Message passed");
@@ -42,9 +40,8 @@ public class TestClass {
 
     @Test
     public void UserSerializationTest() {
-
-        serialize.serialization(new TypeRef<User>() {});
-        String user_id = c.getUsername();
+        User user = serialize.serialization(new TypeRef<User>() {});;
+        String user_id = user.getUsername();
         Assert.assertEquals(user_id, "HearthWarrio");
 
         log.info("Serialization of User passed");
@@ -53,10 +50,12 @@ public class TestClass {
 
     @Test
     public void InsertDataToDatabaseTest() throws SQLException {
-
-        String user_id = c.getUsername();
-        String user_message = b.getText();
-        int update_id = a.getUpdate_id();
+        User user = serialize.serialization(new TypeRef<User>() {});;
+        Message message = serialize.serialization(new TypeRef<Message>() {});
+        Result result = serialize.serialization(new TypeRef<Result>() {});
+        String user_id = user.getUsername();
+        String user_message = message.getText();
+        int update_id = result.getUpdate_id();
 
         insert.InsertDataToDatabase(user_id, user_message, update_id);
 
@@ -71,9 +70,9 @@ public class TestClass {
 
     @Test
     public void  SelectFromDatabaseTest() throws SQLException {
-
+        User user = serialize.serialization(new TypeRef<User>() {});;
         insert.SelectFromDatabase();
-        Assert.assertEquals(c.getUsername(), "HearthWarrio");
+        Assert.assertEquals(user.getUsername(), "HearthWarrio");
 
     }
 }
